@@ -1,3 +1,8 @@
+import dns from "dns";
+
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+import "dotenv/config";
 import "dotenv/config";
 import "./config/passport.config";
 import express, { NextFunction, Request, Response } from "express";
@@ -60,6 +65,11 @@ app.use(errorHandler);
 
 // Connect to database (important: don't use app.listen for Vercel)
 connctDatabase();
+if (process.env.NODE_ENV !== "production") {
+  app.listen(8000, () => {
+    console.log("Server running on port 8000");
+  });
+}
 
-// Export for Vercel (this is critical)
+// Export for Vercel
 export default app;
