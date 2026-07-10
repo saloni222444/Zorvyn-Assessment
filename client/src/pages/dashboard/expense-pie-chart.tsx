@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Label, Pie, PieChart, Cell } from "recharts";
 
 import {
@@ -9,14 +8,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartLegend,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { DateRangeType } from "@/components/date-range-select";
-import { formatCurrency } from "@/lib/format-currency";
+
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatPercentage } from "@/lib/format-percentage";
 import { EmptyState } from "@/components/empty-state";
