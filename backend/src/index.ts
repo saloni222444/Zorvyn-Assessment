@@ -3,7 +3,6 @@ import dns from "dns";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 import "dotenv/config";
-import "dotenv/config";
 import "./config/passport.config";
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
